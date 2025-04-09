@@ -6,6 +6,8 @@ const Home: NextPage = () => {
   return (
     <LandingLayout
       navColor="#F2B7B4"
+      showFooter={false}
+      showNavBar={false}
     >
       <HomePage/>
     </LandingLayout>

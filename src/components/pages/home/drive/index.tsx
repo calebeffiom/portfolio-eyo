@@ -2,7 +2,7 @@
 import { Container } from "@shared"
 import Link from "next/link"
 import { motion } from 'framer-motion';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     FiPenTool, FiTrendingUp, FiBarChart2, FiSearch,
     FiBook, FiHash, FiEdit, FiFilter, FiPocket, FiUsers,
@@ -86,12 +86,48 @@ const Drive = () => {
     ];
 
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerView = 3; // Show 3 items at a time
 
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [itemsPerView, setItemsPerView] = useState(3); // Show 3 items at a time
+
+    const [width, setWidth] = useState(0); // Start with an empty state
+
+  useEffect(() => {
+    // Check if the window object is available (client-side only)
+    if (typeof window !== 'undefined') {
+      // Set the initial screen width on mount
+      setWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setWidth(window.innerWidth);
+      };
+
+      // Add event listener for window resize
+      window.addEventListener('resize', handleResize);
+
+      // Cleanup on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []); // Empty dependency array means this effect runs once on mount
+
+  // Update itemsPerView based on screen size
+  useEffect(() => {
+    if (width <= 1024) {
+      setItemsPerView(2);
+      if(width <= 460){
+        setItemsPerView(1); // Default to 3 when larger than 1024px
+      } // Change itemsPerView to 2 when screen size is 1024px or smaller
+    }else{
+        setItemsPerView(3)
+    }
+  }, [width]);
     const visibleServices = servicesArr.slice(currentIndex, currentIndex + itemsPerView);
 
     const next = () => {
+
         setCurrentIndex(prev => Math.min(prev + itemsPerView, servicesArr.length - itemsPerView));
     };
 
@@ -101,15 +137,15 @@ const Drive = () => {
 
     return (
         <section>
-            <div className="py-[100px] bg-gradient-to-b from-[#FECF5A] to-[#F2B7B4]">
+            <div className="py-[100px] max-xs:py-[10px] xs:py-[10px] lg:py-[100px] bg-gradient-to-b from-[#FECF5A] to-[#F2B7B4]">
                 <Container>
                     <div>
-                        <div className="w-[100%] text-center leading-tight mb-[80px]">
-                            <h2 className="text-[60px] mb-[18px]">What do I offer you? </h2>
+                        <div className="w-[100%] text-center leading-tight mb-[80px] max-lg:mb-[40px]">
+                            <h2 className="text-[60px] mb-[18px] max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px]">What do I offer you? </h2>
                             <motion.div
                                 initial={{ width: 0 }}
                                 whileInView={{ width: '80px' }}
-                                className="h-1 bg-gray-900 mt-4 mx-auto origin-center"
+                                className="h-1 bg-gray-900 mt-4 mx-auto origin-center max-sm:mx-[0]"
                             />
 
                             {/* </motion.div> */}
@@ -117,7 +153,7 @@ const Drive = () => {
                         </div>
                         <section className="section-content-cont">
                             <div className="section-content-flex flex justify-between">
-                                <div className="section-image-cont w-[12%]">
+                                <div className="section-image-cont w-[12%] max-sm:hidden">
                                     <motion.div
                                         initial={{ opacity: 0, x: -100 }} // Start off the screen to the left
                                         whileInView={{ opacity: 1, x: 0 }} // Move to its original position
@@ -132,7 +168,7 @@ const Drive = () => {
 
 
                                 </div>
-                                <div className="section-content w-[70%]">
+                                <div className="section-content w-[70%] max-sm:w-[100%]">
                                     <div className="section-content-heading mb-[50px]">
                                     <motion.div
                                         initial={{ opacity: 0, x: 100 }} // Start off the screen to the left
@@ -143,7 +179,7 @@ const Drive = () => {
                                             damping: 25, // Optional: Adjust the damping for smoothness
                                         }}
                                     >
-                                        <h2 className="text-[40px] mb-[70px] leading-tight">
+                                        <h2 className="text-[40px] mb-[70px] leading-tight max-sm:text-start max-sm:text-[17px] max-sm:mb-1 sm:text-[18px] md:text-[20px] lg:text-[30px] xl:text-[40px]">
                                             Make it stand out. It all begins with an idea. Here are just a few of the services I provide for your business.
                                         </h2>
                                     </motion.div>
@@ -151,7 +187,7 @@ const Drive = () => {
 
                                     {/* Carousel Container */}
                                     <div className="relative">
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                                        <div className={`grid grid-cols-2 grid-rows-1 h-[fit-content] max-xs:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 xl:gap-12`}>
                                             {visibleServices.map((service, index) => (
                                                 <motion.div
                                                 key={index}
@@ -164,8 +200,8 @@ const Drive = () => {
                                                     className="p-6 bg-white rounded-[30px] shadow-md transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center"
                                                 >
                                                     <div className="mb-6">{service.icon}</div>
-                                                    <h3 className="text-xl font-bold mb-6">{service.heading}</h3>
-                                                    <p className="text-gray-700">{service.paragraph}</p>
+                                                    <h3 className="text-xl lg:text-[18px] xl:text-xl font-bold mb-6">{service.heading}</h3>
+                                                    <p className="text-gray-700 max-sm:text-[12px] sm:text-[11px] md:text-[13px] lg:text-[13px] xl:text-[15px]">{service.paragraph}</p>
                                                 </div>
                                                 </motion.div>
                                             ))}

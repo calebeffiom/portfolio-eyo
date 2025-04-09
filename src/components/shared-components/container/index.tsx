@@ -4,7 +4,7 @@ interface PropTypes{
 }
 const Container = ({children} :PropTypes) =>{
     return(
-        <section className="w-[85%] mx-auto">
+        <section className="w-[85%] max-md:w-[90%] mx-auto">
             {children}
         </section>
     )

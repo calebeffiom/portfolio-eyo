@@ -6,9 +6,9 @@ const HomePage = () =>{
             <HomeHero />
             <Experience/>
             <Drive/>
-            <HowWeHelp/>
-            <WhatWeDo/>
-            <Testimonials/>
+            {/* <HowWeHelp/> */}
+            {/* <WhatWeDo/> */}
+            {/* <Testimonials/> */}
         </div>
     )
 }
