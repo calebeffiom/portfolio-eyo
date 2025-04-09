@@ -1,14 +1,14 @@
 import { LandingLayout } from "@layouts";
-import HomePage from "./pages/home"
+import ContactPage from "../pages/contact"
 import { NextPage } from "next";
-// import "./styles/globals.css"
-const Home: NextPage = () => {
+// import "../styles/globals.css"
+const Contact: NextPage = () => {
   return (
     <LandingLayout
       navColor="#F2B7B4"
     >
-      <HomePage/>
+      <ContactPage/>
     </LandingLayout>
   );
 }
-export default Home
+export default Contact

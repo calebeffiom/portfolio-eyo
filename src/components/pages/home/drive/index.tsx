@@ -1,0 +1,203 @@
+"use client";
+import { Container } from "@shared"
+import Link from "next/link"
+import { motion } from 'framer-motion';
+import { useState } from "react";
+import {
+    FiPenTool, FiTrendingUp, FiBarChart2, FiSearch,
+    FiBook, FiHash, FiEdit, FiFilter, FiPocket, FiUsers,
+    FiRepeat, FiSettings, FiChevronLeft, FiChevronRight
+} from "react-icons/fi";
+const Drive = () => {
+
+    const servicesArr = [
+        {
+            heading: "Visual Design",
+            paragraph:
+                "If your brand looks scattered or forgettable, you’re losing trust — I design visuals that feel cohesive, credible, and scroll-stopping.",
+            icon: <FiPenTool className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Digital Advertising",
+            paragraph:
+                "Bleeding money on ads that don’t convert? I find the sweet spot between creative and targeting to make every dollar count.",
+            icon: <FiTrendingUp className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Data & Analytics",
+            paragraph:
+                "You don’t need more data — you need better decisions. I turn metrics into actionable growth moves you can trust.",
+            icon: <FiBarChart2 className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "SEO Optimization",
+            paragraph:
+                "You’re invisible on Google? I fix that. I build search strategies that bring in high-intent traffic month after month.",
+            icon: <FiSearch className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Research",
+            paragraph:
+                "You can’t grow if you don’t know your market — I dig deep to uncover the insights that guide smarter, profit-driven decisions.",
+            icon: <FiBook className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Branding",
+            paragraph:
+                "A weak brand confuses people; a strong one converts them. I help businesses build identities that connect and compel.",
+            icon: <FiHash className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Content Marketing",
+            paragraph:
+                "Your content shouldn’t just sound good — it should convert. I create strategic content that attracts, engages, and sells.",
+            icon: <FiEdit className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Funnels",
+            paragraph:
+                "If people are dropping off, your funnel’s broken. I optimize the entire buyer journey so more leads say yes.",
+            icon: <FiFilter className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Go-To-Market (GTM) Strategy",
+            paragraph:
+                "Launching without a plan is gambling. I build GTM strategies that give your product the traction it deserves from day one.",
+            icon: <FiPocket className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Partnerships & Collaborations",
+            paragraph:
+                "You don’t have to grow alone. I help brands form smart, aligned partnerships that amplify reach and accelerate results.",
+            icon: <FiUsers className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Customer Retention",
+            paragraph:
+                "Acquisition is just the beginning. I develop retention strategies that keep customers engaged, loyal, and coming back for more.",
+            icon: <FiRepeat className="text-6xl text-gray-800 animate-pulse" />,
+        },
+        {
+            heading: "Marketing Automation",
+            paragraph:
+                "Manual marketing doesn’t scale. I implement automation systems that save time, reduce errors, and drive consistent results.",
+            icon: <FiSettings className="text-6xl text-gray-800 animate-pulse" />,
+        },
+    ];
+
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const itemsPerView = 3; // Show 3 items at a time
+
+    const visibleServices = servicesArr.slice(currentIndex, currentIndex + itemsPerView);
+
+    const next = () => {
+        setCurrentIndex(prev => Math.min(prev + itemsPerView, servicesArr.length - itemsPerView));
+    };
+
+    const prev = () => {
+        setCurrentIndex(prev => Math.max(prev - itemsPerView, 0));
+    };
+
+    return (
+        <section>
+            <div className="py-[100px] bg-gradient-to-b from-[#FECF5A] to-[#F2B7B4]">
+                <Container>
+                    <div>
+                        <div className="w-[100%] text-center leading-tight mb-[80px]">
+                            <h2 className="text-[60px] mb-[18px]">What do I offer you? </h2>
+                            <motion.div
+                                initial={{ width: 0 }}
+                                whileInView={{ width: '80px' }}
+                                className="h-1 bg-gray-900 mt-4 mx-auto origin-center"
+                            />
+
+                            {/* </motion.div> */}
+                            {/* <div className="w-20 h-1 bg-gray-900 mx-auto mb-8"/> */}
+                        </div>
+                        <section className="section-content-cont">
+                            <div className="section-content-flex flex justify-between">
+                                <div className="section-image-cont w-[12%]">
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -100 }} // Start off the screen to the left
+                                        whileInView={{ opacity: 1, x: 0 }} // Move to its original position
+                                        transition={{
+                                            type: 'spring', // Smooth movement
+                                            stiffness: 100, // Optional: Adjust the spring stiffness for a bounce effect
+                                            damping: 25, // Optional: Adjust the damping for smoothness
+                                        }}
+                                    >
+                                        <img src="/img/arrow.png" alt="Arrow" />
+                                    </motion.div>
+
+
+                                </div>
+                                <div className="section-content w-[70%]">
+                                    <div className="section-content-heading mb-[50px]">
+                                    <motion.div
+                                        initial={{ opacity: 0, x: 100 }} // Start off the screen to the left
+                                        whileInView={{ opacity: 1, x: 0 }} // Move to its original position
+                                        transition={{
+                                            type: 'spring', // Smooth movement
+                                            stiffness: 100, // Optional: Adjust the spring stiffness for a bounce effect
+                                            damping: 25, // Optional: Adjust the damping for smoothness
+                                        }}
+                                    >
+                                        <h2 className="text-[40px] mb-[70px] leading-tight">
+                                            Make it stand out. It all begins with an idea. Here are just a few of the services I provide for your business.
+                                        </h2>
+                                    </motion.div>
+                                    </div>
+
+                                    {/* Carousel Container */}
+                                    <div className="relative">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                                            {visibleServices.map((service, index) => (
+                                                <motion.div
+                                                key={index}
+                                                initial={{ opacity: 0, y: 20 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: index * 0.1 }}
+                                              >
+                                                <div
+                                                    key={index}
+                                                    className="p-6 bg-white rounded-[30px] shadow-md transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center"
+                                                >
+                                                    <div className="mb-6">{service.icon}</div>
+                                                    <h3 className="text-xl font-bold mb-6">{service.heading}</h3>
+                                                    <p className="text-gray-700">{service.paragraph}</p>
+                                                </div>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+
+                                        {/* Carousel Controls */}
+                                        <div className="flex justify-center gap-4 mt-8">
+                                            <button
+                                                onClick={prev}
+                                                disabled={currentIndex === 0}
+                                                className="p-3 rounded-full bg-white/80 hover:bg-white disabled:opacity-30 shadow-lg transition-all"
+                                            >
+                                                <FiChevronLeft className="w-6 h-6 text-gray-900" />
+                                            </button>
+                                            <button
+                                                onClick={next}
+                                                disabled={currentIndex >= servicesArr.length - itemsPerView}
+                                                className="p-3 rounded-full bg-white/80 hover:bg-white disabled:opacity-30 shadow-lg transition-all"
+                                            >
+                                                <FiChevronRight className="w-6 h-6 text-gray-900" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </Container>
+            </div>
+        </section>
+    );
+};
+
+
+export default Drive
