@@ -1,7 +1,7 @@
 "use client";
 import { Container } from "@shared"
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 
@@ -59,8 +59,39 @@ const HowWeHelp = () => {
       ];
     
       const [currentIndex, setCurrentIndex] = useState(0);
-      const itemsPerView = 4;
-    
+      const [itemsPerView, setItemsPerView] = useState(4)
+      const [width, setWidth] = useState(0);
+        useEffect(() => {
+          // Check if the window object is available (client-side only)
+          if (typeof window !== 'undefined') {
+            // Set the initial screen width on mount
+            setWidth(window.innerWidth);
+      
+            const handleResize = () => {
+              setWidth(window.innerWidth);
+            };
+      
+            // Add event listener for window resize
+            window.addEventListener('resize', handleResize);
+      
+            // Cleanup on component unmount
+            return () => {
+              window.removeEventListener('resize', handleResize);
+            };
+          }
+        }, []); // Empty dependency array means this effect runs once on mount
+      
+        // Update itemsPerView based on screen size
+        useEffect(() => {
+          if (width <= 760) {
+            setItemsPerView(2);
+            if(width <= 460){
+              setItemsPerView(1); // Default to 3 when larger than 1024px
+            } // Change itemsPerView to 2 when screen size is 1024px or smaller
+          }else{
+              setItemsPerView(4)
+          }
+        }, [width]);
       const visibleServices = services.slice(currentIndex, currentIndex + itemsPerView);
     
       const next = () => {
@@ -73,7 +104,7 @@ const HowWeHelp = () => {
     
       return (
         <section className="relative">
-          <div className="py-20 md:py-28 bg-[#F2B7B4]">
+          <div className="py-20 md:py-28 max-md:py-10 bg-[#F2B7B4]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col lg:flex-row justify-between md:gap-12">
                 {/* Left Content */}
@@ -83,7 +114,7 @@ const HowWeHelp = () => {
                     animate={{ opacity: 1 }}
                     className="mb-12"
                   >
-                    <h2 className="text-[60px] md:text-6xl bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                    <h2 className="text-[60px] max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px] bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
                       My Tech Stack
                     </h2>
                     <motion.div 
@@ -145,12 +176,12 @@ const HowWeHelp = () => {
                 </div>
     
                 {/* Right Image */}
-                <div className="w-[45%] relative group">
-                    <div className="relative overflow-hidden rounded-3xl lg:rounded-[40px] shadow-2xl transform transition-transform duration-500 hover:scale-105">
+                <div className="w-[45%] max-lg:hidden relative group">
+                    <div className="relative overflow-hidden max-sm:h-[fit-content] max-md:h-[fit-content] rounded-3xl rounded-3xl lg:rounded-[40px] shadow-2xl transform transition-transform duration-500 hover:scale-105">
                         <img 
                             src="/img/setup.jpeg"
                             alt="Caleb Effiom"
-                            className="w-full h-auto aspect-[3/4]"
+                            className="w-full h-auto aspect-[3/4] object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"/>
                     </div>

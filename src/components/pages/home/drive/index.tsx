@@ -171,7 +171,7 @@ const Drive = () => {
                                 <div className="section-content w-[70%] max-sm:w-[100%]">
                                     <div className="section-content-heading mb-[50px]">
                                     <motion.div
-                                        initial={{ opacity: 0, x: 100 }} // Start off the screen to the left
+                                        initial={{ opacity: 0, x: 0 }} // Start off the screen to the left
                                         whileInView={{ opacity: 1, x: 0 }} // Move to its original position
                                         transition={{
                                             type: 'spring', // Smooth movement
