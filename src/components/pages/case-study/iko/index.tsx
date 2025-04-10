@@ -99,11 +99,11 @@ const Iko = () => {
 
                             <div className="mb-[30px]">
                                 <div><h2 className="text-[20px] mb-[10px] max-sm:text-[15px] sm:text-[20px]">Overview :</h2></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Project :</span><span>Iko Africa</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Industry :</span><span>Digital Publishing / Creative Community</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Role :</span><span>Founder & Growth Strategist</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Milestone :</span><span>30,000+ engaged community members</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Primary Channels :</span><span>Organic Social, Email, Community Marketing</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Project :</span><span>Iko Africa</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Industry :</span><span>Digital Publishing / Creative Community</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Role :</span><span>Founder & Growth Strategist</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Milestone :</span><span>30,000+ engaged community members</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Primary Channels :</span><span>Organic Social, Email, Community Marketing</span></p></div>
                             </div>
 
                             <div className="mb-[30px] hidden">

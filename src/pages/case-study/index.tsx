@@ -5,7 +5,6 @@ const CaseStudy: NextPage =()=>{
     return(
         <LandingLayout
             navColor="#F2B7B4"
-            showNavBar={false}
         >
             <CaseStudyPage/>
         </LandingLayout>

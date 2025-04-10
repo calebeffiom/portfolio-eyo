@@ -99,11 +99,11 @@ const Metiers = () => {
 
                             <div className="mb-[30px]">
                                 <div><h2 className="text-[20px] mb-[10px] max-sm:text-[15px] sm:text-[20px]">Overview :</h2></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Client :</span><span>Métiers Bien-Être</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Industry :</span><span>Wellness Education (French-speaking markets)</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Role :</span><span>Growth Marketing Consultant </span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Revenue Milestone :</span><span> £225,000 in course sales</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Channels :</span><span> Paid Ads (Meta + Google), Webflow, Creative Strategy, CRO</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Client :</span><span>Métiers Bien-Être</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Industry :</span><span>Wellness Education (French-speaking markets)</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Role :</span><span>Growth Marketing Consultant </span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Revenue Milestone :</span><span> £225,000 in course sales</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Channels :</span><span> Paid Ads (Meta + Google), Webflow, Creative Strategy, CRO</span></p></div>
                             </div>
 
                             <div className="mb-[30px] hidden">

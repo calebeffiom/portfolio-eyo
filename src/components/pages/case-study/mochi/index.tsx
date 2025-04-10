@@ -99,11 +99,11 @@ const Mochi = () =>{
 
                             <div className="mb-[30px]">
                                 <div><h2 className="text-[20px] mb-[10px] max-sm:text-[15px] sm:text-[20px]">Overview :</h2></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Client :</span><span>Mochi Label</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Industry :</span><span>Influencer Marketing & Talent Management</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Role :</span><span>Growth Consultant</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Revenue Impact :</span><span>From stagnant to $600,000+ in annual revenue</span></p></div>
-                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Focus Area :</span><span>Offer Clarity, Funnel Optimization, Revenue Strategy, Sales Enablement, Systems</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Client :</span><span>Mochi Label</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Industry :</span><span>Influencer Marketing & Talent Management</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Role :</span><span>Growth Consultant</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Revenue Impact :</span><span>From stagnant to $600,000+ in annual revenue</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Focus Area :</span><span>Offer Clarity, Funnel Optimization, Revenue Strategy, Sales Enablement, Systems</span></p></div>
                             </div>
 
                             <div className="mb-[30px] hidden">
