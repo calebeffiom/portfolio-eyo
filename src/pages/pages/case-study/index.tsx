@@ -5,7 +5,10 @@ const CaseStudyPage = () =>{
         <Vitamins /> 
         <Iko />
         <Mochi/>
-        <Metiers/> 
+        <Metiers/>
+        {/* <Iko />
+        <Mochi/>
+        <Metiers/>  */}
         </>
     )
 }

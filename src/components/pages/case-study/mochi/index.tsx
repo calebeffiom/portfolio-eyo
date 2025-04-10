@@ -19,8 +19,8 @@ const Mochi = () =>{
         <section>
             <div className="pt-[50px] pb-[100px] text-start  bg-gradient-to-b from-[#FECF5A] to-[#F2B7B4]">
                 <Container>
-                <div className="bg-[#fff] shadow-lg w-[70%] mx-[auto] rounded-[30px] p-[30px]">
-                        <div className="relative w-[fit-content] mx-auto h-[600px] mb-[50px] overflow-hidden rounded-[30px]">
+                <div className="bg-[#fff] shadow-lg w-[70%] max-md:w-[100%] md:w-[100%] lg:w-[90%] xl:w-[70%] mx-[auto] rounded-[30px] p-[30px]">
+                        <div className="relative w-[fit-content] mx-auto h-[600px] max-sm:h-[250px] sm:h-[250px] md:h-[350px] lg:h-[600px] mb-[50px] overflow-hidden rounded-[30px]">
                             {/* Slides container */}
                             <div
                                 className="flex transition-transform duration-300 ease-out"
@@ -29,11 +29,11 @@ const Mochi = () =>{
                                 {slides.map((slide, index) => (
                                     <div
                                         key={index}
-                                        className="min-w-full relative h-[600px]"
+                                        className="min-w-full relative h-[600px] max-sm:h-[250px] sm:h-[250px] md:h-[350px] lg:h-[600px]"
                                     >
                                         <img
                                             src={slide}
-                                            className="w-full h-full object-contain shadow-lg rounded-[30px]"
+                                            className="w-full h-full  sm:h-[250px] md:h-[350px] lg:h-[600px] object-contain shadow-lg rounded-[30px]"
                                             alt={`Slide ${index + 1}`}
                                         />
                                     </div>
@@ -94,30 +94,30 @@ const Mochi = () =>{
                         </div>
 
                         <div>
-                            <div className="mb-[30px]"><h2 className="text-[30px]">Mochi Label
+                            <div className="mb-[30px]"><h2 className="text-[30px] max-sm:text-[15px] sm:text-[20px] lg:text-[30px]">Mochi Label
                             From revenue roadblocks to $600K+ in 12 months. Scaling an influencer agency with lean, focused strategy.</h2></div>
 
                             <div className="mb-[30px]">
-                                <div><h2 className="text-[20px] mb-[10px]">Overview :</h2></div>
-                                <div><p><span className="mr-[15px] font-normal">Client :</span><span>Mochi Label</span></p></div>
-                                <div><p><span className="mr-[15px] font-normal">Industry :</span><span>Influencer Marketing & Talent Management</span></p></div>
-                                <div><p><span className="mr-[15px] font-normal">Role :</span><span>Growth Consultant</span></p></div>
-                                <div><p><span className="mr-[15px] font-normal">Revenue Impact :</span><span>From stagnant to $600,000+ in annual revenue</span></p></div>
-                                <div><p><span className="mr-[15px] font-normal">Focus Area :</span><span>Offer Clarity, Funnel Optimization, Revenue Strategy, Sales Enablement, Systems</span></p></div>
+                                <div><h2 className="text-[20px] mb-[10px] max-sm:text-[15px] sm:text-[20px]">Overview :</h2></div>
+                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Client :</span><span>Mochi Label</span></p></div>
+                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Industry :</span><span>Influencer Marketing & Talent Management</span></p></div>
+                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Role :</span><span>Growth Consultant</span></p></div>
+                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Revenue Impact :</span><span>From stagnant to $600,000+ in annual revenue</span></p></div>
+                                <div><p className="max-sm:text-[15px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Focus Area :</span><span>Offer Clarity, Funnel Optimization, Revenue Strategy, Sales Enablement, Systems</span></p></div>
                             </div>
 
-                            <div className="mb-[30px]">
-                                <div><h2 className="text-[20px] mb-[10px]">The Challenge :</h2></div>
+                            <div className="mb-[30px] hidden">
+                                <div><h2 className="text-[20px] mb-[10px] sm:text-[13px] md:text-[18px]">The Challenge :</h2></div>
                                 <div className="mb-[30px]">
-                                    <p className="font-light">Mochi Label had the talent, the audience, and the network but revenue growth was flatlining.
+                                    <p className="font-light max-sm:text-[13px] sm:text-[13px] md:text-[18px]">Mochi Label had the talent, the audience, and the network but revenue growth was flatlining.
                                     Despite managing a roster of quality influencers and producing strong campaign results, the agency lacked clear positioning, scalable offers, and predictable revenue systems. They were operating off referrals and one-off deals with no growth engine in place.</p>
                                 </div>
-                                <div className="hidden">
-                                    <h2 className="text-[20px] mb-[10px]">My Approach :</h2>
+                                <div className="">
+                                    <h2 className="text-[20px] mb-[10px] max-sm:text-[15px] sm:text-[20px]">My Approach :</h2>
 
-                                    <p className="font-light mb-[30px]"><span className="font-normal text-[18px] block mb-[7px]">Step 1 : Offer Restructuring for Scalability</span>
+                                    <p className="font-light mb-[30px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="font-normal text-[18px] block mb-[7px]">Step 1 : Offer Restructuring for Scalability</span>
                                     We took a hard look at their service model and streamlined it. The new structure included:
-                                        <ul className="list-disc leading-[2] my-[10px]">
+                                        <ul className="list-disc leading-[2] my-[10px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]">
                                             <li>Tiered service packages</li>
                                             <li> Clear deliverables and pricing</li>
                                             <li>Retainers and recurring revenue options</li>
@@ -127,9 +127,9 @@ const Mochi = () =>{
                                     
 
 
-                                    <p className="font-light mb-[30px]"><span className="font-normal text-[18px] block mb-[7px]">Step 2 : Built a Revenue-Focused Funnel</span>
+                                    <p className="font-light mb-[30px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="font-normal text-[18px] block mb-[7px]">Step 2 : Built a Revenue-Focused Funnel</span>
                                     We created a basic but powerful funnel:
-                                        <ul className="list-disc leading-[2] my-[10px]">
+                                        <ul className="list-disc leading-[2] my-[10px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]">
                                             <li> Lead magnets tailored to brands looking for influencer partnerships</li>
                                             <li>A structured email flow that educated and pitched</li>
                                             <li>Optimized landing pages that highlighted case studies and talent success</li>
@@ -138,14 +138,14 @@ const Mochi = () =>{
                                     </p>
 
                                     
-                                    <p className="font-light mb-[30px]"><span className="font-normal text-[18px] block mb-[7px]">Step 3 : Revamped Positioning & Sales Materials</span>
+                                    <p className="font-light mb-[30px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="font-normal text-[18px] block mb-[7px]">Step 3 : Revamped Positioning & Sales Materials</span>
                                     We repositioned Mochi Label not just as an influencer agency, but as a growth partner for brands. This change in language and presentation gave the team more leverage during sales conversations.
                                     </p>
 
 
-                                    <p className="font-light mb-[30px]"><span className="font-normal text-[18px] block mb-[7px]">Step 4 : Operational Systems & Tools</span>
+                                    <p className="font-light mb-[30px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="font-normal text-[18px] block mb-[7px]">Step 4 : Operational Systems & Tools</span>
                                     We introduced streamlined tools and automations to reduce friction in:
-                                        <ul className="list-disc leading-[2] my-[10px]">
+                                        <ul className="list-disc leading-[2] my-[10px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]">
                                             <li>Client onboarding</li>
                                             <li>Influencer communication</li>
                                             <li>Proposal creation and invoicing</li>

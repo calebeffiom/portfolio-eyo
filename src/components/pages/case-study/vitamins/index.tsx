@@ -18,13 +18,47 @@ const Vitamins = () => {
     const handlePrev = () => {
         setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     };
+
+    const [isShow, setIsShow] = useState(false)
+    const [changeText, setChangeText] = useState("More")
+
+    const seeMore=(text: string)=>{
+        if(text === "More"){
+            setChangeText("Less")
+            setIsShow(true)
+        }
+        else{
+            setChangeText("More")
+            setIsShow(false)
+        }
+        return text;
+    }
+
+    // const seeLess=(text: string)=>{
+    //     if(text === "Less"){
+    //         setChangeText("More")
+    //         setIsShow(false)
+    //     }
+    //     else{
+    //         setChangeText("Less")
+    //         setIsShow(true)
+    //     }
+    //     return text;
+    // }
+
+    // const seeLess=()=>{
+    //     setIsShow(false) 
+    //     setChangeText("More")
+    // }
+
+
     return (
 
         <section>
             <div className="pt-[50px] pb-[100px] text-start  bg-gradient-to-b from-[#F2B7B4] to-[#FECF5A] ">
                 <Container>
-                    <div className="bg-[#fff] shadow-lg w-[70%] mx-[auto] rounded-[30px] p-[30px]">
-                        <div className="relative w-[fit-content] mx-auto h-[600px] mb-[50px] overflow-hidden rounded-[30px]">
+                    <div className="bg-[#fff] shadow-lg w-[70%]  max-md:w-[100%] md:w-[100%] lg:w-[90%] xl:w-[70%] mx-[auto] rounded-[30px] p-[30px]">
+                        <div className="relative w-[fit-content] mx-auto h-[600px] max-sm:h-[250px] sm:h-[250px] md:h-[350px] lg:h-[600px] mb-[50px] max-xs:mb-[20px] overflow-hidden rounded-[30px]">
                             {/* Slides container */}
                             <div
                                 className="flex transition-transform duration-300 ease-out"
@@ -33,11 +67,11 @@ const Vitamins = () => {
                                 {slides.map((slide, index) => (
                                     <div
                                         key={index}
-                                        className="min-w-full relative h-[600px]"
+                                        className="min-w-full relative h-[600px] max-sm:h-[250px] sm:h-[250px] md:h-[350px] lg:h-[600px]"
                                     >
                                         <img
                                             src={slide}
-                                            className="w-full h-full object-contain shadow-lg rounded-[30px]"
+                                            className="w-full h-full max-sm:h-[250px] sm:h-[250px] md:h-[350px] lg:h-[600px] object-contain shadow-lg rounded-[30px]"
                                             alt={`Slide ${index + 1}`}
                                         />
                                     </div>
@@ -97,38 +131,38 @@ const Vitamins = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="mb-[30px]"><h2 className="text-[30px]">V Vitamins Scaling a Women’s wellness brand to $2M+ in revenue</h2></div>
+                            <div className="mb-[30px]"><h2 className="text-[30px] max-sm:text-[15px] sm:text-[20px] lg:text-[30px]">V Vitamins Scaling a Women’s wellness brand to $2M+ in revenue</h2></div>
                             <div className="mb-[30px]">
-                                <div><h2 className="text-[20px] mb-[10px]">Overview :</h2></div>
-                                <div><p><span className="mr-[15px] font-normal">Industry :</span><span>Women’s Wellness | Intimate Health</span></p></div>
-                                <div><p><span className="mr-[15px] font-normal">Role :</span><span>Growth Marketing Manager</span></p></div>
-                                <div><p><span className="mr-[15px] font-normal">Milestone :</span><span>$2M+ in 24 months</span></p></div>
-                                <div><p><span className="mr-[15px] font-normal">Primary Channels :</span><span>Organic Social, Email, Funnels, Digital Products</span></p></div>
+                                <div><h2 className="text-[20px] mb-[10px] max-sm:text-[15px] sm:text-[20px]">Overview :</h2></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Industry :</span><span>Women’s Wellness | Intimate Health</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Role :</span><span>Growth Marketing Manager</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Milestone :</span><span>$2M+ in 24 months</span></p></div>
+                                <div><p className="max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Primary Channels :</span><span>Organic Social, Email, Funnels, Digital Products</span></p></div>
                             </div>
 
-                            <div className="mb-[30px]">
-                                <div><h2 className="text-[20px] mb-[10px]">The Challenge :</h2></div>
+                            <div className={isShow === false ? "hidden" : "block mb-[30px]"}>
+                                <div><h2 className="text-[20px] mb-[10px] max-sm:text-[15px] sm:text-[20px]">The Challenge :</h2></div>
                                 <div className="mb-[30px]">
-                                    <p className="font-light">V Vitamins was one of the most demanding and rewarding growth roles I’ve ever taken on.
+                                    <p className="font-light max-sm:text-[13px] sm:text-[13px] md:text-[18px]">V Vitamins was one of the most demanding and rewarding growth roles I’ve ever taken on.
                                         As a male marketer in the women’s intimate wellness space, I had to navigate the complexity of marketing vaginal suppositories in a way that was both authentic and respectful. The challenge wasn’t just visibility, it was earning trust in a sensitive, underserved market.
                                         This wasn’t a space for gimmicks. It demanded real storytelling, emotional intelligence, and relentless customer-first thinking.</p>
                                 </div>
-                                <div className="hidden">
-                                    <h2 className="text-[20px] mb-[10px]">My Approach :</h2>
+                                <div className="">
+                                    <h2 className="text-[20px] mb-[10px] max-sm:text-[15px] sm:text-[20px]">My Approach :</h2>
 
-                                    <p className="font-light mb-[30px]"><span className="font-normal text-[18px] block mb-[7px]">Step 1 : Storytelling That Spoke to Pain Points</span>
+                                    <p className="font-light mb-[30px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="font-normal text-[18px] block mb-[7px]">Step 1 : Storytelling That Spoke to Pain Points</span>
                                         We led with vulnerability and truth. By amplifying the founder’s personal journey — her health challenges, emotional lows, and real transformation — we created content that resonated deeply.
                                         We made space for taboo topics, encouraged community conversation, and built a brand voice rooted in empathy, not hype.
                                         A single founder story post on Instagram drove over 10,000 profile visits in 48 hours and significantly boosted conversions.(Include image of that IG post here.)</p>
 
 
-                                    <p className="font-light mb-[30px]"><span className="font-normal text-[18px] block mb-[7px]">Step 2 : Testimonial-Led Growth</span>Word-of-mouth was critical. Instead of forcing overly polished branding, we leaned into DMs, product reviews, and voice-note testimonials from real women.
+                                    <p className="font-light mb-[30px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="font-normal text-[18px] block mb-[7px]">Step 2 : Testimonial-Led Growth</span>Word-of-mouth was critical. Instead of forcing overly polished branding, we leaned into DMs, product reviews, and voice-note testimonials from real women.
                                         These authentic snippets became organic posts that fueled a loop of trust → purchase → share → repeat.</p>
 
-                                    <p className="font-light mb-[30px]"><span className="font-normal text-[18px] block mb-[7px]">Step 3 : Free Digital Products = High-Converting Funnels</span>
+                                    <p className="font-light mb-[30px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="font-normal text-[18px] block mb-[7px]">Step 3 : Free Digital Products = High-Converting Funnels</span>
                                         We launched free, zero-cost digital products (simple but beautifully designed in Canva) as opt-in incentives, guides on vaginal care, detox routines, cycle syncing, and more.
                                         The effect was immediate:
-                                        <ul className="list-disc leading-[2] mt-[10px]">
+                                        <ul className="list-disc leading-[2] mt-[10px] max-sm:text-[13px] sm:text-[13px] md:text-[18px]">
                                             <li>Email list grew exponentially </li>
                                             <li>Leads came in warm, educated, and ready to buy</li>
                                             <li>Many customers converted within the first 3-email touchpoints</li>
@@ -136,7 +170,7 @@ const Vitamins = () => {
                                     </p>
 
 
-                                    <p className="font-light"><span className="font-normal text-[18px] block mb-[7px]">Step 4 : Email Marketing = Consistent Revenue Engine</span>
+                                    <p className="font-light max-sm:text-[13px] sm:text-[13px] md:text-[18px]"><span className="font-normal text-[18px] block mb-[7px]">Step 4 : Email Marketing = Consistent Revenue Engine</span>
                                         We didn’t just build an email list, we turned it into a powerful revenue stream.
                                         Through strategic flows (welcome, education, upsell, post-purchase, and win-back), we turned subscribers into loyal customers.
                                         This channel alone drove over $25,000/month in revenue.That’s without paid boosts just value-based content, optimized offers, and behavior-triggered flows.</p>
@@ -144,7 +178,7 @@ const Vitamins = () => {
                             </div>
 
 
-                            <div className="w-[fit-content] mx-[auto] shadow-lg bg-[#000] text-[#fff] rounded-[20px] shadow-lg"><button className="text-[20px py-[15px] px-[35px] cursor-pointer">See More</button></div>
+                            <div className="w-[fit-content] mx-[auto] shadow-lg bg-[#000] text-[#fff] rounded-[20px] shadow-lg"><button className="text-[20px py-[15px] px-[35px] cursor-pointer" onClick={()=>{seeMore(changeText)}}>See {changeText}</button></div>
                         </div>
                     </div>
                 </Container>
