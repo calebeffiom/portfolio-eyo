@@ -15,6 +15,20 @@ const Mochi = () =>{
     const handlePrev = () => {
         setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     };
+    const [isShow, setIsShow] = useState(false)
+    const [changeText, setChangeText] = useState("More")
+
+    const seeMore=(text: string)=>{
+        if(text === "More"){
+            setChangeText("Less")
+            setIsShow(true)
+        }
+        else{
+            setChangeText("More")
+            setIsShow(false)
+        }
+        return text;
+    }
     return(
         <section>
             <div className="pt-[50px] pb-[100px] text-start  bg-gradient-to-b from-[#FECF5A] to-[#F2B7B4]">
@@ -106,7 +120,7 @@ const Mochi = () =>{
                                 <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Focus Area :</span><span>Offer Clarity, Funnel Optimization, Revenue Strategy, Sales Enablement, Systems</span></p></div>
                             </div>
 
-                            <div className="mb-[30px] hidden">
+                            <div className={isShow === false ? "hidden" : "block mb-[30px]"}>
                                 <div><h2 className="text-[20px] mb-[10px] sm:text-[13px] md:text-[18px]">The Challenge :</h2></div>
                                 <div className="mb-[30px]">
                                     <p className="font-light max-sm:text-[13px] sm:text-[13px] md:text-[18px]">Mochi Label had the talent, the audience, and the network but revenue growth was flatlining.
@@ -156,7 +170,7 @@ const Mochi = () =>{
                             </div>
 
 
-                            <div className="w-[fit-content] mx-[auto] shadow-lg bg-[#000] text-[#fff] rounded-[20px] shadow-lg"><button className="text-[20px py-[15px] px-[35px] cursor-pointer">See More</button></div>
+                            <div className="w-[fit-content] mx-[auto] shadow-lg bg-[#000] text-[#fff] rounded-[20px] shadow-lg"><button className="text-[20px py-[15px] px-[35px] cursor-pointer" onClick={()=>{seeMore(changeText)}}>See {changeText}</button></div>
                         </div>
                     </div>
                 </Container>

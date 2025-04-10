@@ -14,7 +14,7 @@ const WhatWeDo = () => {
     ]
     return (
         <section>
-            <div className="bg-gradient-to-b from-[#F2B7B4] to-[#FECF5A] py-[100px]">
+            <div className="bg-gradient-to-b from-[#F2B7B4] to-[#FECF5A] py-[50px] max-xs:py-[50px] lg:py-[100px]">
                 <Container>
                     <div>
                         <div className="text-center">

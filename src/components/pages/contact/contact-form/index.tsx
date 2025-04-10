@@ -7,25 +7,13 @@ const ContactForm = () => {
     }
     return (
         <section>
-            <div className="bg-gradient-to-b from-[#F2B9B4] to-[#FCCA6D] py-[100px]">
+            <div className="bg-gradient-to-b from-[#F2B9B4] to-[#FCCA6D] py-[100px] sm:py-[50px] max-sm:py-[50px]">
                 <Container>
-                    <div className="flex flex-col lg:flex-row items-start justify-between">
+                    <div className="flex flex-col lg:flex-row items-center justify-between">
                         <div className="lg:w-1/2">
-                            <h1 className="text-[60px] font-bold mb-6">Let’s connect.</h1>
-                            <p>email@example.com</p>
-                            <p className=" mb-4">(555) 555-5555</p>
-                            <p>123 Demo Street</p>
-                            <p className=" mb-6">New York, NY 12345</p>
-                            <div className="flex space-x-4 mb-6">
-                                <a href="#" className="hover:text-zinc-300">
-                                    Instagram
-                                </a>
-                                <a href="#" className="hover:text-zinc-300">
-                                    Twitter
-                                </a>
-                            </div>
+                            <h1 className="text-[60px] font-bold mb-6 max-sm:text-[25px] sm:text-[25px]">Let’s connect.</h1>
                         </div>
-                        <form className="lg:w-1/2 bg-[transparent] rounded-lg ">
+                        <form className="md:w-[60%] lg:w-1/2 bg-[transparent] rounded-lg ">
                         <label className="block text-[#000] mb-4">
                                         Name <span>(required)</span>
                                     </label>

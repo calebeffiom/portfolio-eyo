@@ -104,7 +104,7 @@ const HowWeHelp = () => {
     
       return (
         <section className="relative">
-          <div className="py-20 md:py-28 max-md:py-10 bg-[#F2B7B4]">
+          <div className="py-20 max-md:py-10 md:py-18 bg-[#F2B7B4]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col lg:flex-row justify-between md:gap-12">
                 {/* Left Content */}

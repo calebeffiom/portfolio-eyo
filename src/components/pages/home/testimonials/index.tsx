@@ -21,7 +21,7 @@ const Testimonials = () => {
     ]
     return (
         <section>
-            <div className="bg-[#fecf5a] py-[100px] max-xs:py-[10px] xs:py-[10px] lg:py-[100px]">
+            <div className="bg-[#fecf5a] py-[50px] max-xs:py-[50px] lg:py-[100px]">
                 <Container>
 
                     <div>

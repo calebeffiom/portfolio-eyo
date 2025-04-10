@@ -30,7 +30,7 @@ const Experience = () => {
                                         damping: 25, // Optional: Adjust the damping for smoothness
                                     }}
                                 >
-                                    <p className="text-lg max-sm:text-[13px] sm:text-[15px] md:text-[15px] leading-relaxed text-gray-900">
+                                    <p className="text-lg max-sm:text-[13px] sm:text-[15px] md:text-[15px] lg:text-[18px] leading-relaxed text-gray-900">
                                         With over <span className="font-semibold">20 years of combined experience</span>,
                                         I believe every great venture starts with a spark of imagination. Whether you're launching
                                         a startup, transforming a passion project, or sharing creative work with the world,
@@ -48,7 +48,7 @@ const Experience = () => {
                                             damping: 25, // Optional: Adjust the damping for smoothness
                                         }}
                                     >
-                                        <p className="text-lg max-sm:text-[13px] sm:text-[15px] md:text-[15px] italic text-gray-900">
+                                        <p className="text-lg max-sm:text-[13px] sm:text-[15px] md:text-[15px] lg:text-[18px] italic text-gray-900">
                                             "Your story isn't just content - it's the soul of your brand.
                                             If your words don't sound like they're coming from you,
                                             we still have work to do."

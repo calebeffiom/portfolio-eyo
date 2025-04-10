@@ -16,11 +16,25 @@ const Metiers = () => {
     const handlePrev = () => {
         setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     };
+    const [isShow, setIsShow] = useState(false)
+    const [changeText, setChangeText] = useState("More")
+
+    const seeMore=(text: string)=>{
+        if(text === "More"){
+            setChangeText("Less")
+            setIsShow(true)
+        }
+        else{
+            setChangeText("More")
+            setIsShow(false)
+        }
+        return text;
+    }
     return (
         <section>
             <div className="pt-[50px] pb-[100px] text-start  bg-[#F2B7B4] ">
                 <Container>
-                    <div className="bg-[#fff] shadow-lg w-[70%] max-md:w-[100%] md:w-[100%] lg:w-[90%] xl:w-[70% mx-[auto] rounded-[30px] p-[30px]">
+                    <div className="bg-[#fff] shadow-lg w-[70%] max-md:w-[100%] md:w-[100%] lg:w-[90%] xl:w-[70%] mx-[auto] rounded-[30px] p-[30px]">
                         <div className="relative w-[fit-content] mx-auto h-[600px] max-sm:h-[250px] sm:h-[250px] md:h-[350px] lg:h-[600px] mb-[50px] overflow-hidden rounded-[30px]">
                             {/* Slides container */}
                             <div
@@ -106,7 +120,7 @@ const Metiers = () => {
                                 <div><p className="max-sm:text-[13px] sm:text-[18px]"><span className="mr-[15px] font-normal max-sm:text-[15px] sm:text-[18px]">Channels :</span><span> Paid Ads (Meta + Google), Webflow, Creative Strategy, CRO</span></p></div>
                             </div>
 
-                            <div className="mb-[30px] hidden">
+                            <div className={isShow === false ? "hidden" : "block mb-[30px]"}>
                                 <div><h2 className="text-[20px] mb-[10px] sm:text-[13px] md:text-[18px]">The Mission:</h2></div>
                                 <div className="mb-[30px]">
                                     <p className="font-light sm:text-[13px] md:text-[18px]">Métiers Bien-Être had a strong product, professional wellness certification courses but poor conversion rates. Despite heavy ad spend across Facebook and Instagram, the purchase rate remained disappointingly low. The issue? A scattered user experience, misaligned messaging, and zero funnel clarity. They weren’t short on traffic — they were short on strategy and structure.</p>
@@ -150,7 +164,7 @@ const Metiers = () => {
                             </div>
 
 
-                            <div className="w-[fit-content] mx-[auto] shadow-lg bg-[#000] text-[#fff] rounded-[20px] shadow-lg"><button className="text-[20px py-[15px] px-[35px] cursor-pointer">See More</button></div>
+                            <div className="w-[fit-content] mx-[auto] shadow-lg bg-[#000] text-[#fff] rounded-[20px] shadow-lg"><button className="text-[20px py-[15px] px-[35px] cursor-pointer" onClick={()=>{seeMore(changeText)}}>See {changeText}</button></div>
                         </div>
                     </div>
                 </Container>
