@@ -4,7 +4,7 @@ import { NextPage } from "next";
 const CaseStudy: NextPage =()=>{
     return(
         <LandingLayout
-            navColor="#F2B7B4"
+            navColor="#fff"
         >
             <CaseStudyPage/>
         </LandingLayout>

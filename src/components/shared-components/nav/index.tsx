@@ -10,8 +10,8 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ color }) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <nav className="w-full">
-            <div className={`${color !== "" ? `bg-[${color}]` : "bg-transparent"}`}>
+        <nav className="w-full shadow-lg">
+            <div style={{backgroundColor: `${color}`}} className={`${color !== "" ? `bg-[${color}]` : "bg-transparent"}`}>
 
             
             <Container>

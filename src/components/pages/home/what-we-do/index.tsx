@@ -14,15 +14,15 @@ const WhatWeDo = () => {
     ]
     return (
         <section>
-            <div className="bg-gradient-to-b from-[#F2B7B4] to-[#FECF5A] py-[50px] max-xs:py-[50px] lg:py-[100px]">
+            <div className="bg-[#2c66c3] py-[50px] max-xs:py-[50px] lg:py-[100px]">
                 <Container>
                     <div>
                         <div className="text-center">
-                            <h2 className="text-5xl max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px]">Businesses I’ve worked with </h2>
+                            <h2 className="text-[#fff] text-5xl max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px]">Businesses I’ve worked with </h2>
                             <motion.div
                                 initial={{ width: 0 }}
                                 whileInView={{ width: '80px' }}
-                                className="h-1 bg-gray-900 mx-[auto] mt-4 origin-left mb-[50px]  max-sm:mx-[0]"
+                                className="h-1 bg-[#fff] mx-[auto] mt-4 origin-left mb-[50px]  max-sm:mx-[0]"
                             />
 
                         </div>

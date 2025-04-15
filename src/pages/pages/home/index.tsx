@@ -4,7 +4,7 @@ const HomePage = () =>{
     return(
         <div>
             <HomeHero />
-            <Experience/>
+            {/* <Experience/> */}
             <Drive/>
             <HowWeHelp/>
             <WhatWeDo/>

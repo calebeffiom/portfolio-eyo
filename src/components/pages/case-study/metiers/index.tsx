@@ -32,7 +32,7 @@ const Metiers = () => {
     }
     return (
         <section>
-            <div className="pt-[50px] pb-[100px] text-start  bg-[#F2B7B4] ">
+            <div className="pt-[50px] pb-[100px] text-start bg-[#a8c7d9] ">
                 <Container>
                     <div className="bg-[#fff] shadow-lg w-[70%] max-md:w-[100%] md:w-[100%] lg:w-[90%] xl:w-[70%] mx-[auto] rounded-[30px] p-[30px]">
                         <div className="relative w-[fit-content] mx-auto h-[600px] max-sm:h-[250px] sm:h-[250px] md:h-[350px] lg:h-[600px] mb-[50px] overflow-hidden rounded-[30px]">

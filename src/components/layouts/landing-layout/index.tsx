@@ -27,7 +27,7 @@ const LandingLayout = ({
         // <html lang="en">
             // <body>
             <div>
-            {showNavBar === true ? navColor === "#F2B7B4" ? <Navbar color={navColor}/> : <Navbar color={navColor}/> : null}
+            {showNavBar === true && <Navbar color={navColor}/>}
                 <main>{children}</main>
             {showFooter === true && <Footer/>}
             </div>

@@ -55,7 +55,7 @@ const Vitamins = () => {
     return (
 
         <section>
-            <div className="pt-[50px] pb-[100px] text-start  bg-gradient-to-b from-[#F2B7B4] to-[#FECF5A] ">
+            <div className="pt-[50px] pb-[100px] text-start  bg-gradient-to-b from-[#a8c7d9] to-[#2c66c3] ">
                 <Container>
                     <div className="bg-[#fff] shadow-lg w-[70%]  max-md:w-[100%] md:w-[100%] lg:w-[90%] xl:w-[70%] mx-[auto] rounded-[30px] p-[30px]">
                         <div className="relative w-[fit-content] mx-auto h-[600px] max-sm:h-[250px] sm:h-[250px] md:h-[350px] lg:h-[600px] mb-[50px] max-xs:mb-[20px] overflow-hidden rounded-[30px]">
