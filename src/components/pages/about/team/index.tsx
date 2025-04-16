@@ -2,12 +2,12 @@ import { Container } from "@shared"
 const Team = () => {
     return (
         <section>
-            <div className="bg-gradient-to-b from-[#FECF5A] to-[#F2B7B4] pt-[50px] pb-[100px]">
+            <div className="bg-[#2c66c3] pt-[50px] pb-[100px]">
                 <Container>
                     <div>
-                        <div className="w-[fit-content] mx-[auto] mb-[100px]"><h2 className="text-[4rem]">Meet the team</h2></div>
+                        <div className="w-[fit-content] mx-[auto] mb-[100px] text-[#fff]"><h2 className="text-[4rem]">Meet the team</h2></div>
 
-                        <div className="flex justify-between gap-[25%]">
+                        <div className="flex justify-between gap-[25%] text-[#fff]">
 
                             <div className="w-[40%]">
                                 <div className="">
@@ -22,7 +22,7 @@ const Team = () => {
 
 
 
-                            <div className="w-[40%]">
+                            <div className="w-[40%] text-[#fff]">
                                 <div>
                                     <img src="/img/image-asset7.jpeg" className="h-[550px] w-[100%]" alt="" />
                                 </div>

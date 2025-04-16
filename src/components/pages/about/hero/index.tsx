@@ -3,7 +3,7 @@ import Link from "next/link"
 const AboutHero = () =>{
     return(
         <header>
-            <div className="header-inner pb-[50px] pt-[200px] bg-gradient-to-b from-[#F2B7B4] to-[#FECF5A]">
+            <div className="header-inner pb-[50px] pt-[200px] bg-gradient-to-b from-[#a8c7d9] to-[#2c66c3]">
                 <Container>
                     <section className="hero-content-cont mb-[100px]">
                         <div className="hero-headingText-cont w-[75%] mb-[60px]">
@@ -16,10 +16,10 @@ const AboutHero = () =>{
 
 
 
-                    <section className="section-content-cont">
+                    <section className="section-content-cont text-[#fff]">
                         <div className="section-content-flex flex justify-between">
                             <div className="section-image-cont w-[12%]">
-                                <img src="/img/arrow.png" alt="" />
+                                <img src="/img/white-arrow.png" alt="" />
                             </div>
                             <div className="section-content w-[70%]">
                                 <div className="section-content-heading mb-[50px]">

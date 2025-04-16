@@ -4,7 +4,7 @@ import { LandingLayout } from "@layouts";
 const About: NextPage = () => {
     return (
       <LandingLayout
-        navColor="#F2B7B4"
+        navColor="#ffff"
       >
         <AboutPage/>
       </LandingLayout>
