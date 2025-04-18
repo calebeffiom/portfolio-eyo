@@ -58,8 +58,8 @@ const Navbar: React.FC<NavbarProps> = ({ color }) => {
                                 className="md:hidden px-6 pb-4"
                             >
                                 <ul className=" gap-4 text-lg bg-[#fff] h-[auto] ml-[auto] font-medium">
-                                    <li><Link className="block w-full px-4 py-2 bg-[#fff] hover:bg-white/30" href="/about" onClick={() => setIsOpen(false)}>Contact</Link></li>
-                                    <li><Link className="block w-full px-4 py-3 bg-[#fff] hover:bg-white/30" href="/case-study" onClick={() => setIsOpen(false)}><span className="flex"><p>Chat me</p> {isMailOpen === false? <IoMail className="text-[25px] ml-[10px]"/>:<IoMailOpen className="text-[24px] ml-[10px]"/>}</span></Link></li>
+                                    <li><Link className="block w-full px-4 py-2 bg-[#fff] hover:bg-white/30" href="/case-study" onClick={() => setIsOpen(false)}>Case Study</Link></li>
+                                    <li><Link className="block w-full px-4 py-3 bg-[#fff] hover:bg-white/30" href="mailto: emmanueleyo25@gmail.com" onClick={() => setIsOpen(false)}><span className="flex"><p>Chat me</p> {isMailOpen === false? <IoMail className="text-[25px] ml-[10px]"/>:<IoMailOpen className="text-[24px] ml-[10px]"/>}</span></Link></li>
                                     
                                 </ul>
                             </motion.div>
