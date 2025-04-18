@@ -21,16 +21,16 @@ const Testimonials = () => {
     ]
     return (
         <section>
-            <div className="bg-gradient-to-b from-[#2c66c3] to-[#a8c7d9] py-[50px] max-xs:py-[50px] lg:py-[100px]">
+            <div className="bg-[#FECF5A] py-[50px] max-xs:py-[50px] lg:py-[100px]">
                 <Container>
 
                     <div>
                         <div className="w-[100%] leading-tight mb-[80px] max-lg:mb-[40px] lg:mb-[80px] ">
-                            <h2 className="text-[#fff] text-[60px] mb-[18px] max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px]">Testimonials </h2>
+                            <h2 className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-[60px] mb-[18px] max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px]">Testimonials </h2>
                             <motion.div
                                 initial={{ width: 0 }}
                                 whileInView={{ width: '80px' }}
-                                className="h-1 bg-[#fff] mt-4 origin-left"
+                                className="h-1 bg-[#000] mt-4 origin-left"
                             />
 
                             {/* </motion.div> */}
@@ -51,7 +51,7 @@ const Testimonials = () => {
                                                 damping: 25, // Optional: Adjust the damping for smoothness
                                             }}
                                         >
-                                            <h2 className="text-[40px] text-[#fff] mb-[70px] leading-tight max-sm:text-start max-sm:text-[17px] max-sm:mb-1 sm:text-[18px] md:text-[20px] lg:text-[30px] xl:text-[40px]">
+                                            <h2 className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-[40px] mb-[70px] leading-tight max-sm:text-start max-sm:text-[17px] max-sm:mb-1 sm:text-[18px] md:text-[20px] lg:text-[30px] xl:text-[40px]">
                                                 Make it stand out. It all begins with an idea. Here are just a few of the services I provide for your business.
                                             </h2>
                                         </motion.div>
@@ -94,7 +94,7 @@ const Testimonials = () => {
                                             damping: 25, // Optional: Adjust the damping for smoothness
                                         }}
                                     >
-                                        <img src="/img/white-reverse-arrow.png" alt="Arrow" />
+                                        <img src="/img/reverse-arrow.png" alt="Arrow" />
                                     </motion.div>
 
 

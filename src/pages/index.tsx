@@ -5,7 +5,7 @@ import { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <LandingLayout
-      navColor="#fff"
+      navColor="#F2B6B4"
     >
       <HomePage/>
     </LandingLayout>

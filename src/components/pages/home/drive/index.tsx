@@ -137,11 +137,11 @@ const Drive = () => {
 
     return (
         <section>
-            <div className="py-[100px] max-xs:py-[50px] xs:py-[50px] lg:py-[100px] bg-[#a8c7d9]">
+            <div className="py-[100px] max-xs:py-[50px] xs:py-[50px] lg:py-[100px] bg-gradient-to-b from-[#FECF5A] to-[#F2B6B4]">
                 <Container>
                     <div>
                         <div className="w-[100%] text-center leading-tight mb-[80px] max-lg:mb-[40px]">
-                            <h2 className="text-[60px] mb-[18px] max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px]">What do I offer you? </h2>
+                            <h2 className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-[60px] mb-[18px] max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px]">What do I offer you? </h2>
                             <motion.div
                                 initial={{ width: 0 }}
                                 whileInView={{ width: '80px' }}
@@ -179,7 +179,7 @@ const Drive = () => {
                                             damping: 25, // Optional: Adjust the damping for smoothness
                                         }}
                                     >
-                                        <h2 className="text-[40px] mb-[70px] leading-tight max-sm:text-start max-sm:text-[17px] max-sm:mb-1 sm:text-[18px] md:text-[20px] lg:text-[30px] xl:text-[40px]">
+                                        <h2 className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-[40px] mb-[70px] leading-tight max-sm:text-start max-sm:text-[17px] max-sm:mb-1 sm:text-[18px] md:text-[20px] lg:text-[30px] xl:text-[40px]">
                                             Make it stand out. It all begins with an idea. Here are just a few of the services I provide for your business.
                                         </h2>
                                     </motion.div>
@@ -200,7 +200,7 @@ const Drive = () => {
                                                     className="p-6 bg-white rounded-[30px] shadow-md transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center"
                                                 >
                                                     <div className="mb-6">{service.icon}</div>
-                                                    <h3 className="text-xl lg:text-[18px] xl:text-xl font-bold mb-6">{service.heading}</h3>
+                                                    <h3 className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-xl lg:text-[18px] xl:text-xl font-bold mb-6">{service.heading}</h3>
                                                     <p className="text-gray-700 max-sm:text-[12px] sm:text-[11px] md:text-[13px] lg:text-[13px] xl:text-[15px]">{service.paragraph}</p>
                                                 </div>
                                                 </motion.div>

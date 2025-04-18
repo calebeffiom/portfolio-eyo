@@ -7,7 +7,7 @@ const Experience = () => {
             <div className="bg-[#FECF5A] py-16 md:py-24">
                 <Container>
                     <div className="max-w-4xl mx-auto text-center mb-12 md:mb-20">
-                        <h2 className="text-[60px] max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px] text-gray-900 mb-6">
+                        <h2 className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-[60px] max-sm:text-start max-sm:text-[1.3rem] max-sm:mb-1 sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] xl:text-[60px] text-gray-900 mb-6">
                             Crafting Digital Stories<br className="hidden md:block" /> That Resonate
                         </h2>
                         <motion.div
@@ -30,7 +30,7 @@ const Experience = () => {
                                         damping: 25, // Optional: Adjust the damping for smoothness
                                     }}
                                 >
-                                    <p className="text-lg max-sm:text-[13px] sm:text-[15px] md:text-[15px] lg:text-[18px] leading-relaxed text-gray-900">
+                                    <p className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-lg max-sm:text-[13px] sm:text-[15px] md:text-[15px] lg:text-[18px] leading-relaxed text-gray-900">
                                         With over <span className="font-semibold">20 years of combined experience</span>,
                                         I believe every great venture starts with a spark of imagination. Whether you're launching
                                         a startup, transforming a passion project, or sharing creative work with the world,
@@ -48,7 +48,7 @@ const Experience = () => {
                                             damping: 25, // Optional: Adjust the damping for smoothness
                                         }}
                                     >
-                                        <p className="text-lg max-sm:text-[13px] sm:text-[15px] md:text-[15px] lg:text-[18px] italic text-gray-900">
+                                        <p className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-lg max-sm:text-[13px] sm:text-[15px] md:text-[15px] lg:text-[18px] italic text-gray-900">
                                             "Your story isn't just content - it's the soul of your brand.
                                             If your words don't sound like they're coming from you,
                                             we still have work to do."

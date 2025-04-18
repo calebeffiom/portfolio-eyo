@@ -104,7 +104,7 @@ const HowWeHelp = () => {
     
       return (
         <section className="relative">
-          <div className="py-20 max-md:py-10 md:py-18 bg-gradient-to-b from-[#a8c7d9] to-[#2c66c3]">
+          <div className="py-20 max-md:py-10 md:py-18 bg-[#F2B6B4]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col lg:flex-row justify-between md:gap-12">
                 {/* Left Content */}
@@ -187,7 +187,7 @@ const HowWeHelp = () => {
                     </div>
                     
                     {/* Decorative Element */}
-                    <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#a8c7d9] rounded-full opacity-30 group-hover:opacity-50 transition-opacity"/>
+                    <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#F2B6B4] rounded-full opacity-30 group-hover:opacity-50 transition-opacity"/>
                 </div>
               </div>
             </div>
