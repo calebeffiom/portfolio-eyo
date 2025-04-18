@@ -22,6 +22,18 @@ const config: Config = {
         'max-lg': { 'max': '1024px' },
         'max-xl': { 'max': '1280px' },
       },
+      keyframes: {
+        // Custom bounce: starts at 0, lifts up 50px at 50%, back at 100%
+        bounceCustom: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%':      { transform: 'translateY(-50px)' },
+        },
+      },
+      animation: {
+        // name      | keyframes        | duration | easing          | repeat
+        bounceCustom: 'bounceCustom 1s ease-in-out infinite',
+      },
+      
     },
   },
   plugins: [],
