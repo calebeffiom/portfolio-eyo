@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ color }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMailOpen, setIsMailOpen] = useState(false)
     return (
-        <nav className="w-full shadow-lg">
+        <nav className="w-full shadow-sm relative top-0">
             <div style={{backgroundColor: `${color}`}} className={`${color !== "" ? `bg-[${color}]` : "bg-transparent"}`}>
 
             
@@ -28,12 +28,12 @@ const Navbar: React.FC<NavbarProps> = ({ color }) => {
 
                         {/* Desktop Nav */}
                         <ul className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent hidden items-center md:flex overflow-y-hidden gap-10 text-lg font-medium">
-                            <li><Link href="/case-study">Case Study</Link></li>
+                            <li><Link href="/case-study">Case Studies</Link></li>
                             <li className="bg-gray-900 rounded-[10px]">
                                 <Link
                                 onMouseEnter={()=>{setIsMailOpen(true)}}
                                 onMouseLeave={()=>{setIsMailOpen(false)}}
-                            className="block px-[30px] text-[#fff] py-[10px] shadow-lg" href="mailto: emmanueleyo25@gmail.com"><span className="flex"><p>Chat me</p> {isMailOpen === false? <IoMail className="text-[24px] ml-[10px]"/>:<IoMailOpen className="text-[24px] ml-[10px]"/>}</span></Link></li>
+                            className="block px-[30px] text-[#fff] py-[10px] shadow-lg" href="mailto: emmanueleyo25@gmail.com"><span className="flex"><p>Contact me</p> {isMailOpen === false? <IoMail className="text-[24px] ml-[10px]"/>:<IoMailOpen className="text-[24px] ml-[10px]"/>}</span></Link></li>
                         </ul>
 
                         {/* Mobile Menu Button */}
@@ -58,8 +58,8 @@ const Navbar: React.FC<NavbarProps> = ({ color }) => {
                                 className="md:hidden px-6 pb-4"
                             >
                                 <ul className=" gap-4 text-lg bg-[#fff] h-[auto] ml-[auto] font-medium">
-                                    <li><Link className="block w-full px-4 py-2 bg-[#fff] hover:bg-white/30" href="/case-study" onClick={() => setIsOpen(false)}>Case Study</Link></li>
-                                    <li><Link className="block w-full px-4 py-3 bg-[#fff] hover:bg-white/30" href="mailto: emmanueleyo25@gmail.com" onClick={() => setIsOpen(false)}><span className="flex"><p>Chat me</p> {isMailOpen === false? <IoMail className="text-[25px] ml-[10px]"/>:<IoMailOpen className="text-[24px] ml-[10px]"/>}</span></Link></li>
+                                    <li><Link className="block w-full px-4 py-2 bg-[#fff] hover:bg-white/30" href="/case-study" onClick={() => setIsOpen(false)}>Case Studies</Link></li>
+                                    <li><Link className="block w-full px-4 py-3 bg-[#fff] hover:bg-white/30" href="mailto: emmanueleyo25@gmail.com" onClick={() => setIsOpen(false)}><span className="flex"><p>Contact me</p> {isMailOpen === false? <IoMail className="text-[25px] ml-[10px]"/>:<IoMailOpen className="text-[24px] ml-[10px]"/>}</span></Link></li>
                                     
                                 </ul>
                             </motion.div>

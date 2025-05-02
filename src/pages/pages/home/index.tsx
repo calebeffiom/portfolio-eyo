@@ -3,7 +3,7 @@ import { HomeHero, Drive, WhatWeDo, HowWeHelp, Experience, Testimonials } from "
 const HomePage = () =>{
     return(
         <div>
-            <HomeHero />
+            {/* <HomeHero /> */}
             <Experience/>
             <Drive/>
             <HowWeHelp/>
