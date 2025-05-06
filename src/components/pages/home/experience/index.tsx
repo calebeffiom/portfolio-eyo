@@ -30,21 +30,6 @@ const Experience = () => {
                                     I'm a Growth Strategist, Revenue Hacker & Your Next Competitive Advantage.
                                     </p>
                                 </motion.div>
-                                <motion.div
-                                    initial={{ opacity: 0, x: -100 }} // Start off the screen to the left
-                                    whileInView={{ opacity: 1, x: 0 }} // Move to its original position
-                                    transition={{
-                                        type: 'spring', // Smooth movement
-                                        stiffness: 100, // Optional: Adjust the spring stiffness for a bounce effect
-                                        damping: 25, // Optional: Adjust the damping for smoothness
-                                    }}
-                                >
-                                   <p className="bg-gradient-to-r from-gray-900 mb-4 to-gray-700 bg-clip-text text-transparent text-lg max-sm:text-[13px] sm:text-[15px] md:text-[13px] lg:text-[18px] leading-relaxed text-gray-900"> With over <span className="font-semibold">20 years of combined experience</span>,
-                                        I believe every great venture starts with a spark of imagination. Whether you're launching
-                                        a startup, transforming a passion project, or sharing creative work with the world,
-                                        your digital narrative needs to captivate and connect.
-                                    </p>
-                                </motion.div>
 
                                 <div className="pl-6 border-l-4 border-gray-900">
                                     <motion.div
@@ -68,7 +53,7 @@ const Experience = () => {
                             {/* Signature */}
                             <div className="flex items-center space-x-4">
                                 <div className="h-0.5 w-12 bg-gray-900" />
-                                <span className="font-display text-gray-900">Caleb Effiom</span>
+                                <span className="font-display text-gray-900">Caleb</span>
                             </div>
                         </div>
 

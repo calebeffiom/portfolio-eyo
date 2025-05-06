@@ -115,7 +115,7 @@ const Drive = () => {
 
   // Update itemsPerView based on screen size
   useEffect(() => {
-    if (width <= 1024) {
+    if (width <= 1280) {
       setItemsPerView(2);
       if(width <= 460){
         setItemsPerView(1); // Default to 3 when larger than 1024px

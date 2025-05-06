@@ -40,26 +40,11 @@ const Testimonials = () => {
                             <div className="section-content-flex flex justify-between">
                                 
 
-                                <div className="section-content w-[70%] max-sm:w-[100%]">
-                                    <div className="section-content-heading mb-[50px]">
-                                        <motion.div
-                                            initial={{ opacity: 0, x: -100 }} // Start off the screen to the left
-                                            whileInView={{ opacity: 1, x: 0 }} // Move to its original position
-                                            transition={{
-                                                type: 'spring', // Smooth movement
-                                                stiffness: 100, // Optional: Adjust the spring stiffness for a bounce effect
-                                                damping: 25, // Optional: Adjust the damping for smoothness
-                                            }}
-                                        >
-                                            <h2 className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-[40px] mb-[70px] leading-tight max-sm:text-start max-sm:text-[17px] max-sm:mb-1 sm:text-[18px] md:text-[20px] lg:text-[30px] xl:text-[40px]">
-                                                Make it stand out. It all begins with an idea. Here are just a few of the services I provide for your business.
-                                            </h2>
-                                        </motion.div>
-                                    </div>
+                                <div className="section-content w-[100%] max-sm:w-[100%]">
 
                                     {/* Carousel Container */}
                                     <div className="relative">
-                                        <div className="grid grid-cols-2 grid-rows-1 h-[fit-content] max-xs:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 xl:gap-12">
+                                        <div className="grid grid-cols-3 h-[fit-content] gap-3 lg:gap-8 xl:gap-12 md:grid md:grid-cols-3 sm:grid sm:grid-cols-1 max-sm:grid-cols-1">
                                             {testimonials.map((testimony, index) => (
                                                 <motion.div
                                                     key={index}
@@ -70,7 +55,7 @@ const Testimonials = () => {
                                                 >
                                                     <div
                                                         key={index}
-                                                        className="p-6 mx-[auto] bg-white rounded-[30px] shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center"
+                                                        className="p-6 h-[100%] mx-[auto] bg-white rounded-[30px] shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center max-md:w-[80%] max-md:p-8 "
                                                     >
                                                         <div className="mb-6"><FaQuoteLeft className="text-3xl text-gray-800"/></div>
                                                         <p className="text-gray-700 mb-[20px] max-sm:text-[12px] sm:text-[11px] md:text-[13px] lg:text-[13px] xl:text-[15px]">{testimony.content}</p>
@@ -83,21 +68,6 @@ const Testimonials = () => {
 
 
                                     
-                                </div>
-                                <div className="section-image-cont w-[12%] max-sm:hidden">
-                                    <motion.div
-                                        initial={{ opacity: 0, x: 0 }} // Start off the screen to the left
-                                        whileInView={{ opacity: 1, x: 0 }} // Move to its original position
-                                        transition={{
-                                            type: 'spring', // Smooth movement
-                                            stiffness: 100, // Optional: Adjust the spring stiffness for a bounce effect
-                                            damping: 25, // Optional: Adjust the damping for smoothness
-                                        }}
-                                    >
-                                        <img src="/img/reverse-arrow.png" alt="Arrow" />
-                                    </motion.div>
-
-
                                 </div>
                             </div>
                            
