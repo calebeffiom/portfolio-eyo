@@ -169,7 +169,7 @@ const Drive = () => {
 
                                 </div>
                                 <div className="section-content w-[70%] max-sm:w-[100%]">
-                                    <div className="section-content-heading mb-[50px]">
+                                    {/* <div className="section-content-heading mb-[50px]">
                                     <motion.div
                                         initial={{ opacity: 0, x: 0 }} // Start off the screen to the left
                                         whileInView={{ opacity: 1, x: 0 }} // Move to its original position
@@ -183,7 +183,7 @@ const Drive = () => {
                                             Make it stand out. It all begins with an idea. Here are just a few of the services I provide for your business.
                                         </h2>
                                     </motion.div>
-                                    </div>
+                                    </div> */}
 
                                     {/* Carousel Container */}
                                     <div className="relative">
