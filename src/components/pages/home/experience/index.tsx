@@ -42,9 +42,7 @@ const Experience = () => {
                                         }}
                                     >
                                         <p className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent text-lg max-sm:text-[13px] sm:text-[15px] md:text-[13px] lg:text-[18px] italic text-gray-900">
-                                            "Your story isn't just content - it's the soul of your brand.
-                                            If your words don't sound like they're coming from you,
-                                            we still have work to do."
+                                            "Growth is never by mere chance; it is the result of forces working together."
                                         </p>
                                     </motion.div>
                                 </div>
@@ -53,7 +51,7 @@ const Experience = () => {
                             {/* Signature */}
                             <div className="flex items-center space-x-4">
                                 <div className="h-0.5 w-12 bg-gray-900" />
-                                <span className="font-display text-gray-900">Caleb</span>
+                                <span className="font-display text-gray-900">- James Cash Penney</span>
                             </div>
                         </div>
 
